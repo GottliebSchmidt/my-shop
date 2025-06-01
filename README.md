@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# 🛒 Modern React E-commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern e-commerce store built with **React**, **TypeScript**, and **Vite**. The project showcases middle-level frontend development skills, including advanced state management, routing, filtering, sorting, authentication, and SEO enhancements.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+* **Product listing** with filtering (by category, brand, price) and sorting (price, popularity, newest)
+* **Search functionality** with dynamic URL query syncing
+* **Admin panel** with simple **password-based authentication**
+* **Global state management** with React Context API
+* **Responsive UI** and optimized UX
+* **SEO optimization** with:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  * `react-helmet-async`
+  * `sitemap.xml`
+  * `robots.txt`
+* **Mock API** for dynamic product management
+* **TypeScript** strict mode with `verbatimModuleSyntax`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠️ Tech Stack
+
+* React + Vite + TypeScript
+* React Router DOM
+* React Context API
+* react-helmet-async
+* Custom Hooks & Components
+* Mock server (`/data/products.ts`)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/        # UI components
+├── context/           # Context providers (Cart, Admin)
+├── data/              # Mock product data
+├── hooks/             # Custom React hooks
+├── pages/             # Route-based pages (Home, Admin, NotFound)
+├── types/             # Global TypeScript types
+├── App.tsx            # Main app with routing
+└── main.tsx           # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔐 Admin Access
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Simple password-protected access to admin panel.
+
+> ⚠️ Note: This is a **mock implementation** and should be replaced with real authentication in production.
+
+---
+
+## 🧪 Future Improvements
+
+* Product detail page
+* Add to cart + checkout flow
+* Persistent storage (localStorage or backend)
+* Unit & integration tests
+* Product create/edit functionality in admin
+* Backend integration (Node.js, Firebase, Supabase, etc.)
+
+---
+
+## 📦 Getting Started
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+npm install
+npm run dev
 ```
+
+Visit `http://localhost:5173` in your browser.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
