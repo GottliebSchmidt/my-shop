@@ -60,7 +60,7 @@ export const ProductPage = () => {
             try {
                 const found = products.find((p) => p.id.toString() === id);
                 if (!found) {
-                    setError('Товар не найден');
+                    setError('Produkt nicht gefunden');
                     setLoading(false);
                     return;
                 }
@@ -82,7 +82,7 @@ export const ProductPage = () => {
         }
     };
 
-    if (loading) return <div className="p-4 text-center">Загрузка товара...</div>;
+    if (loading) return <div className="p-4 text-center">Produkt wird geladen...</div>;
     if (error) return <div className="p-4 text-center text-red-600">{error}</div>;
     if (!product) return null;
 
@@ -112,7 +112,7 @@ export const ProductPage = () => {
                         onClick={handleAddToCart}
                         className="mt-4 px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
                     >
-                        Добавить в корзину
+                        In den Warenkorb legen
                     </button>
                 </div>
             </div>

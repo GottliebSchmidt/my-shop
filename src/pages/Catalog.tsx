@@ -61,7 +61,7 @@ export const Catalog = () => {
                 setProducts(allProducts);
                 setLoading(false);
             } catch (e) {
-                setError('Ошибка загрузки товаров');
+                setError('Fehler beim Laden der Produkte');
                 setLoading(false);
             }
         }, 700);
@@ -121,19 +121,19 @@ export const Catalog = () => {
     return (
         <>
             <Seo
-                title="Каталог товаров — Магазин"
-                description="Широкий выбор товаров с фильтрацией, сортировкой и пагинацией"
+                title="Produktkatalog — Shop"
+                description="Große Auswahl an Produkten mit Filter-, Sortier- und Seitenfunktion"
             />
 
             <div className="p-4">
                 <Breadcrumbs />
 
-                <h1 className="text-2xl mb-4">Каталог товаров</h1>
+                <h1 className="text-2xl mb-4">Produktkatalog</h1>
 
                 <div className="flex gap-4 mb-6 flex-wrap">
                     <input
                         type="text"
-                        placeholder="Поиск..."
+                        placeholder="Suche..."
                         value={search}
                         onChange={e => setSearch(e.target.value)}
                         className="border p-2 flex-grow min-w-[200px]"
@@ -144,7 +144,7 @@ export const Catalog = () => {
                         onChange={e => setCategory(e.target.value)}
                         className="border p-2"
                     >
-                        <option value="">Все категории</option>
+                        <option value="">Alle Kategorien</option>
                         {categories.map(cat => (
                             <option key={cat} value={cat}>{cat}</option>
                         ))}
@@ -155,7 +155,7 @@ export const Catalog = () => {
                         onChange={e => setBrand(e.target.value)}
                         className="border p-2"
                     >
-                        <option value="">Все бренды</option>
+                        <option value="">Alle Marken</option>
                         {brands.map(b => (
                             <option key={b} value={b}>{b}</option>
                         ))}
@@ -166,11 +166,11 @@ export const Catalog = () => {
                         onChange={e => setSort(e.target.value)}
                         className="border p-2"
                     >
-                        <option value="">Сортировка</option>
-                        <option value="price_asc">Цена ↑</option>
-                        <option value="price_desc">Цена ↓</option>
-                        <option value="newest">Новизна</option>
-                        <option value="popular">Популярность</option>
+                        <option value="">Sortierung</option>
+                        <option value="price_asc">Preis ↑</option>
+                        <option value="price_desc">Preis ↓</option>
+                        <option value="newest">Neuheiten</option>
+                        <option value="popular">Beliebtheit</option>
                     </select>
                 </div>
 

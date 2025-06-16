@@ -9,8 +9,8 @@ export const Footer = () => {
             textAlign: 'center',
             marginTop: '40px'
         }}>
-            <p>© 2025 My Shop. Все права защищены.</p>
-            <p>Контакты: +49 123 456 7890 | info@myshop.com</p>
+            <p>© 2025 Mein Shop. Alle Rechte vorbehalten.</p>
+            <p>Kontakt: +49 123 456 7890 | info@myshop.com</p>
         </footer>
     );
 };

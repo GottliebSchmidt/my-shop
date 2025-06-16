@@ -14,7 +14,7 @@ export const LoginPage = () => {
         if (success) {
             navigate("/admin");
         } else {
-            setError("Неверный пароль");
+            setError("Falsches Passwort");
         }
     };
 
@@ -24,7 +24,7 @@ export const LoginPage = () => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="password"
-                    placeholder="Введите пароль"
+                    placeholder="Passwort eingeben"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />

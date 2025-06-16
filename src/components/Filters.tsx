@@ -13,62 +13,62 @@ export const Filters = () => {
 
     return (
         <div className="flex flex-col md:flex-row md:items-end gap-4 mb-4">
-            {/* Категория */}
+            {/* Kategorie */}
             <select
                 className="border rounded p-2"
                 value={params.get('category') || ''}
                 onChange={(e) => updateParam('category', e.target.value)}
             >
-                <option value="">Все категории</option>
-                <option value="shoes">Обувь</option>
-                <option value="clothes">Одежда</option>
-                <option value="accessories">Аксессуары</option>
+                <option value="">Alle Kategorien</option>
+                <option value="shoes">Schuhe</option>
+                <option value="clothes">Kleidung</option>
+                <option value="accessories">Accessoires</option>
             </select>
 
-            {/* Бренд */}
+            {/* Marke */}
             <select
                 className="border rounded p-2"
                 value={params.get('brand') || ''}
                 onChange={(e) => updateParam('brand', e.target.value)}
             >
-                <option value="">Все бренды</option>
+                <option value="">Alle Marken</option>
                 <option value="Nike">Nike</option>
                 <option value="Adidas">Adidas</option>
                 <option value="Puma">Puma</option>
             </select>
 
-            {/* Цена */}
+            {/* Preis */}
             <input
                 type="number"
-                placeholder="Мин. цена"
+                placeholder="Mindestpreis"
                 className="border rounded p-2 w-24"
                 onChange={(e) => updateParam('minPrice', e.target.value)}
                 defaultValue={params.get('minPrice') || ''}
             />
             <input
                 type="number"
-                placeholder="Макс. цена"
+                placeholder="Maximalpreis"
                 className="border rounded p-2 w-24"
                 onChange={(e) => updateParam('maxPrice', e.target.value)}
                 defaultValue={params.get('maxPrice') || ''}
             />
 
-            {/* Сортировка */}
+            {/* Sortierung */}
             <select
                 className="border rounded p-2"
                 value={params.get('sort') || 'newest'}
                 onChange={(e) => updateParam('sort', e.target.value)}
             >
-                <option value="newest">Сначала новые</option>
-                <option value="price_asc">Цена: по возрастанию</option>
-                <option value="price_desc">Цена: по убыванию</option>
-                <option value="popular">Популярные</option>
+                <option value="newest">Neueste zuerst</option>
+                <option value="price_asc">Preis: aufsteigend</option>
+                <option value="price_desc">Preis: absteigend</option>
+                <option value="popular">Beliebt</option>
             </select>
 
-            {/* Поиск */}
+            {/* Suche */}
             <input
                 type="text"
-                placeholder="Поиск..."
+                placeholder="Suche..."
                 className="border rounded p-2 flex-1"
                 value={localSearch}
                 onChange={(e) => setLocalSearch(e.target.value)}

@@ -7,11 +7,11 @@ export const Breadcrumbs = () => {
     const { id } = useParams<{ id: string }>();
 
     // Начинаем с главной
-    const crumbs = [{ name: 'Главная', path: '/' }];
+    const crumbs = [{ name: 'Home', path: '/' }];
 
     // Добавляем Каталог, если мы не на главной
     if (location.pathname !== '/' && (location.pathname.startsWith('/catalog') || location.pathname.startsWith('/product'))) {
-        crumbs.push({ name: 'Каталог', path: '/' });
+        crumbs.push({ name: 'catalog', path: '/' });
     }
 
     // Если мы на странице продукта — добавляем название товара
@@ -19,7 +19,7 @@ export const Breadcrumbs = () => {
         const product = products.find((p) => p.id.toString() === id);
 
         crumbs.push({
-            name: product ? product.title : `Товар #${id}`,
+            name: product ? product.title : `product #${id}`,
             path: location.pathname,
         });
     }
